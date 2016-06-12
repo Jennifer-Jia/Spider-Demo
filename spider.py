@@ -29,7 +29,7 @@ pool = Pool(POOL_SIZE)
 def load_page(url):
     """Load page, recoder url which is new found, recoder url which is done
     """
-    timeout = Timeout(random.uniform(30,40))
+    timeout = Timeout(random.uniform(20,25))
     timeout.start()
     try:
         r, status_code = http_get(url)
