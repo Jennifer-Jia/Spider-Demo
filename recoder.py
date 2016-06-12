@@ -123,8 +123,10 @@ def move_doing2new(url):
         return True
     else:
         p = get_redis_db(node).pipeline()
-        p.smove(url_doing_key, url_done_key, url)
-        p.hdel(err_retry_count, url)
+        p.smove(generate_key(url_doing_key, node=node),
+                generate_key(url_done_key, node=node), 
+                url)
+        p.hdel(generate_key(err_retry_count, node=node), url)
         p.execute()
         return False
 
