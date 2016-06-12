@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-request_pool_size = 5
+request_pool_size = 100
 
 # request
 start_url = '/'
