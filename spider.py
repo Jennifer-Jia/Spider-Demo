@@ -29,7 +29,7 @@ pool = Pool(POOL_SIZE)
 def load_page(url):
     """Load page, recoder url which is new found, recoder url which is done
     """
-    timeout = Timeout(random.uniform(30,40))
+    timeout = Timeout(random.uniform(20,25))
     timeout.start()
     try:
         r, status_code = http_get(url)
@@ -37,7 +37,7 @@ def load_page(url):
             add_url_done(url)
             return
         elif status_code != 200:
-            logger.info('[url] %s, [status_code] %s' % (url, status_code))
+            logger.info('[url] %s [status_code] %s' % (url, status_code))
             add_url_done(url)
             return
 
@@ -45,9 +45,9 @@ def load_page(url):
     except Timeout, e:
         is_retry = move_doing2new(url)
         if not is_retry:
-            logger.info('[url] %s, [err_last_retry] %s' % (url, e))
+            logger.info('[url] %s [err_last_retry] %s' % (url, e))
         else:
-            logger.info('[url] %s, [err_retry] %s' % (url, e))
+            logger.info('[url] %s [err_retry] %s' % (url, e))
         timeout.cancel()
         return
     except Exception, e:
