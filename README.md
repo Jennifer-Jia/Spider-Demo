@@ -6,11 +6,11 @@ You need use redis to record url. The setting of redis in config.py.
 In config.py you can set parameter.
 
 options:  
-      -h                show this help message and exit  
-      --clear-url       clear url record befor crawl
-      --mv              set mv
+      -h                show this help message and exit  <br/>
+      --clear-url       clear url record befor crawl<br/>
+      --mv              set mv<br/>
 
 example:  
-      python spider.py
-      python spider.py --clear-url  
-      python spider.py --mv 2
+      python spider.py<br/>
+      python spider.py --clear-url  <br/>
+      python spider.py --mv 2<br/>
