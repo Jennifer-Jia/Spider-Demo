@@ -11,5 +11,6 @@ options:
       --mv              set mv
 
 example：
-  python spider.py --clear-url       
-  python spider.py --mv 2
+      python spider.py
+      python spider.py --clear-url       
+      python spider.py --mv 2
