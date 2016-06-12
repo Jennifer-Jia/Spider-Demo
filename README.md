@@ -10,7 +10,7 @@ options:
       --clear-url       clear url record befor crawl
       --mv              set mv
 
-example：
+example:  
       python spider.py
-      python spider.py --clear-url       
+      python spider.py --clear-url  
       python spider.py --mv 2
