@@ -1,1 +1,0 @@
-2016-06-12 11:14:04,013 - INFO - [url] /f/6JFz2ia/?_once_=000025_topdh_fl_6_2 [err_retry] HTTPConnectionPool(host='518.qq.com', port=80): Max retries exceeded with url: /?_once_=000025_topdh_fl_6_2 (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x106987990>, 'Connection to 518.qq.com timed out. (connect timeout=10)'))
